@@ -1,5 +1,21 @@
 # pico-pi
 
+
+
+
+- [pico-pi](#pico-pi)
+  - [About](#about)
+- [Coding Environment](#coding-environment)
+  - [MicroPython](#micropython)
+  - [CircuitPython](#circuitpython)
+  - [C and C++](#c-and-c)
+    - [Overview](#overview)
+    - [Project Setup](#project-setup)
+
+
+
+
+
 ## About
 A handy guide to getting started with the Raspberry Pi Pico
 
@@ -21,3 +37,46 @@ The device will be unmounted and you now have the Micro Python firmware on your 
 
 ## C and C++
 
+### Overview
+
+You can build your own .uf2 firmware using C/C++. You need to use the SDK.
+
+### Project Setup
+
+On linux you need to make sure you have the correct tools
+```bash
+sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
+```
+
+Next in your project folder clone the Pico SDK repo
+
+```bash
+git clone https://github.com/raspberrypi/pico-sdk.git
+```
+
+Copy this file to your project folder
+```bash
+cp pico-sdk/external/pico_sdk_import.cmake ./
+```
+
+Create CMakeLists.txt
+```
+touch CMakeLists.txt
+```
+
+Then edit the contents of CMakeLists.txt in this example our C code is in flash-led.c in the project folder
+
+
+```
+cmake_minimum_required(VERSION 3.12)
+include(pico_sdk_import.cmake)
+project(flash_led_project)
+pico_sdk_init()
+
+add_executable(flash_led
+    flash-led.c
+)
+
+target_link_libraries(flash_led pico_stdlib)
+pico_add_extra_outputs(flash_led)
+```
