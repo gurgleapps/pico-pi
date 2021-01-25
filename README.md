@@ -19,6 +19,7 @@
 ## About
 A handy guide to getting started with the Raspberry Pi Pico
 
+[![Alt text](https://img.youtube.com/vi/xpPPmEJIvhw/0.jpg)](https://youtu.be/xpPPmEJIvhw)
 
 # Coding Environment
 
