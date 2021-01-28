@@ -158,14 +158,14 @@ cp pico-sdk/external/pico_sdk_import.cmake ./
 ```
 
 Create CMakeLists.txt
-```
+```bash
 touch CMakeLists.txt
 ```
 
 Then edit the contents of CMakeLists.txt in this example our C code is in flash-led.c in the project folder
 
 
-```
+```cmake
 cmake_minimum_required(VERSION 3.12)
 include(pico_sdk_import.cmake)
 project(flash_led_project)
