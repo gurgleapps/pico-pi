@@ -179,10 +179,23 @@ target_link_libraries(flash_led pico_stdlib)
 pico_add_extra_outputs(flash_led)
 ```
 
+It will need to know where to find the SDK we cloned from github so
+
+```bash
+export PICO_SDK_PATH=/home/pi/Desktop/dev/pico-sdk
+```
+
+Alternatively you can add this line to CMakeLists.txt to fetch it from git. I like to do things manually so I know it's repeatable. In the future the git repo may change and my old code not work.
+
+```
+set(PICO_SDK_FETCH_FROM_GIT on)
+```
+
+
 ```bash
 cd build
 cmake ..
 make flash_led
 ```
 
-You should find flash_led.uf2 in your build folder. Congratulations you just buult firmware you can copy to your Raspberry Pi Pico.
+You should find flash_led.uf2 in your build folder. Congratulations you just built firmware you can copy to your Raspberry Pi Pico.
