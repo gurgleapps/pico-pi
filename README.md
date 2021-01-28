@@ -116,6 +116,15 @@ You can build your own .uf2 firmware using C/C++. You need to use the SDK.
 ### Project Setup
 
 On linux you need to make sure you have the correct tools
+
+CMake - A great free tool to make your build system.
+
+The GNU Arm Embedded Toolchain - Compiler, libraries and tools to build for the Arm processor.
+
+Newlib - A C library & maths library for embedded systems.
+
+We can easily install all 3 using in the terminal.
+
 ```bash
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
 ```
@@ -125,7 +134,7 @@ CD to your project folder where your code is. In our example our code is flash-l
 #include "pico/stdlib.h"
 
 int main() {
-    const uint LED_PIN = 14;
+    const uint LED_PIN = 25;
     gpio_init(LED_PIN);
     gpio_set_dir(LED_PIN, GPIO_OUT);
     while (true) {
@@ -172,7 +181,7 @@ pico_add_extra_outputs(flash_led)
 
 ```bash
 cd build
-make ..
+cmake ..
 make flash_led
 ```
 
