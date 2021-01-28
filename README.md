@@ -120,6 +120,23 @@ On linux you need to make sure you have the correct tools
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
 ```
 
+CD to your project folder where your code is. In our example our code is flash-led.c
+```c
+#include "pico/stdlib.h"
+
+int main() {
+    const uint LED_PIN = 14;
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
+    while (true) {
+        gpio_put(LED_PIN, 1);
+        sleep_ms(250);
+        gpio_put(LED_PIN, 0);
+        sleep_ms(250);
+    }
+}
+```
+
 Next in your project folder clone the Pico SDK repo
 
 ```bash
@@ -152,3 +169,11 @@ add_executable(flash_led
 target_link_libraries(flash_led pico_stdlib)
 pico_add_extra_outputs(flash_led)
 ```
+
+```bash
+cd build
+make ..
+make flash_led
+```
+
+You should find flash_led.uf2 in your build folder. Congratulations you just buult firmware you can copy to your Raspberry Pi Pico.
