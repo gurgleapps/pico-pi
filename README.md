@@ -111,19 +111,22 @@ The MU code editor is tooled up to work with CircuitPython https://codewith.mu/
 
 ### Overview
 
-You can build your own .uf2 firmware using C/C++. You need to use the SDK.
+You can build your own .uf2 firmware using C/C++. You need to use the SDK, we used these instructions below for our youtube video walkthrough of the process.
+
+[![Alt text](https://img.youtube.com/vi/g3db_zsrXj8/0.jpg)](https://youtu.be/g3db_zsrXj8)
+
 
 ### Project Setup
 
 On linux you need to make sure you have the correct tools
 
-CMake - A great free tool to make your build system.
+* CMake - A great free tool to make your build system.
 
-The GNU Arm Embedded Toolchain - Compiler, libraries and tools to build for the Arm processor.
+* The GNU Arm Embedded Toolchain - Compiler, libraries and tools to build for the Arm processor.
 
-Newlib - A C library & maths library for embedded systems.
+* Newlib - A C library & maths library for embedded systems.
 
-We can easily install all 3 using in the terminal.
+We can easily install all 3 using the terminal.
 
 ```bash
 sudo apt install cmake gcc-arm-none-eabi libnewlib-arm-none-eabi
