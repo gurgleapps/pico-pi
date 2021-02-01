@@ -10,6 +10,8 @@
     - [Get MicroPython on the Pico](#get-micropython-on-the-pico)
     - [Start Coding Using MicroPython](#start-coding-using-micropython)
     - [Copy Files To Pico Using MicroPython](#copy-files-to-pico-using-micropython)
+      - [Ampy](#ampy)
+      - [RShell](#rshell)
   - [CircuitPython](#circuitpython)
     - [Get CircuitPython on the Pico](#get-circuitpython-on-the-pico)
     - [Start Coding Using CircuitPython](#start-coding-using-circuitpython)
@@ -68,6 +70,24 @@ ctrl-a then x to quit
 
 ### Copy Files To Pico Using MicroPython
 
+#### Ampy
+
+Install
+
+```
+sudo apt install python3-pip
+sudo pip3 install adafruit-ampy
+rshell -p /dev/ttyACM0
+ampy --port /dev/ttyACM0 put yourscript.py main.py
+```
+
+Copy files, or run script
+
+```bash
+ampy --port /dev/ttyACM0 run yourscript.py
+```
+
+#### RShell
 If you don't want to be tied to Thonny you can use rshell
 
 ```bash
