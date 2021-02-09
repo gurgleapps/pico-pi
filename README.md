@@ -1,9 +1,9 @@
-# pico-pi
+# Raspberry Pi Pico Tips
 
 
 
 
-- [pico-pi](#pico-pi)
+- [Raspberry Pi Pico Tips](#raspberry-pi-pico-tips)
   - [About](#about)
 - [Coding Environment](#coding-environment)
   - [MicroPython](#micropython)
@@ -31,6 +31,10 @@ A handy guide to getting started with the Raspberry Pi Pico
 # Coding Environment
 
 Pressing the BOOTSEL button on the pico board and plugging it in via USB will mount the pico as a mass storage device. You simply copy over a .uf2 file to change the firmware on your pico.
+
+**Reset Button Tip**
+
+You can wire a momentary switch between Run pin (pin 30) and ground to reset the Pico. You can also use this instead of unplugging and plugging back in to mount as USB storage. [Here is a link to a demo and further info.](https://www.youtube.com/watch?v=1xWvFvWgBDg)
 
 A good place to get started is micro python, or circuit python. You can also build your own firmware in C/C++ using the SDK.
 
