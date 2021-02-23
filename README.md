@@ -7,6 +7,7 @@
 - [About](#about)
 - [Projects](#projects)
   - [Ghost Keyboard Hacking Prank](#ghost-keyboard-hacking-prank)
+  - [Measure Speed Of Sound or Distance with HC-SR04](#measure-speed-of-sound-or-distance-with-hc-sr04)
 - [Coding Environment](#coding-environment)
   - [MicroPython](#micropython)
     - [Get MicroPython on the Pico](#get-micropython-on-the-pico)
@@ -34,7 +35,12 @@ A handy guide to getting started with the Raspberry Pi Pico
 
 ## Ghost Keyboard Hacking Prank
 
-Nice little project, you could even do it with no extra components if you take the switch out and just make it timed. [code](/CircuitPython/hid-keyboard-prank)
+Nice little project, you could even do it with no extra components if you take the switch out and just make it timed. [Here it is on Github](/CircuitPython/hid-keyboard-prank) [you can see it in action here](https://www.youtube.com/watch?v=kkxXQGj2VRw)
+
+## Measure Speed Of Sound or Distance with HC-SR04
+
+[Here it is on Github](/MicroPython/speed-of-sound-hc-sr04) [you can see it in action here](https://www.youtube.com/watch?v=QJXZ_HiCYjQ)
+
 
 # Coding Environment
 
