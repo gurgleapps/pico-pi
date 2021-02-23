@@ -4,7 +4,9 @@
 
 
 - [Raspberry Pi Pico Tips](#raspberry-pi-pico-tips)
-  - [About](#about)
+- [About](#about)
+- [Projects](#projects)
+  - [Ghost Keyboard Hacking Prank](#ghost-keyboard-hacking-prank)
 - [Coding Environment](#coding-environment)
   - [MicroPython](#micropython)
     - [Get MicroPython on the Pico](#get-micropython-on-the-pico)
@@ -23,10 +25,16 @@
 
 
 
-## About
+# About
 A handy guide to getting started with the Raspberry Pi Pico
 
 [![Alt text](https://img.youtube.com/vi/xpPPmEJIvhw/0.jpg)](https://youtu.be/xpPPmEJIvhw)
+
+# Projects
+
+## Ghost Keyboard Hacking Prank
+
+Nice little project, you could even do it with no extra components if you take the switch out and just make it timed. [code](/CircuitPython/hid-keyboard-prank)
 
 # Coding Environment
 
