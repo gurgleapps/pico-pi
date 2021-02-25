@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.12)
+include(pico_sdk_import.cmake)
+project(buttonProject)
+pico_sdk_init()
+add_executable(simple_button_press simple-button-press.c)
+target_link_libraries(simple_button_press pico_stdlib)
+pico_add_extra_outputs(simple_button_press)

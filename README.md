@@ -21,6 +21,7 @@
   - [C and C++](#c-and-c)
     - [Overview](#overview)
     - [Project Setup](#project-setup)
+- [Debug using OpenOCD](#debug-using-openocd)
 
 
 
@@ -240,3 +241,19 @@ make flash_led
 ```
 
 You should find flash_led.uf2 in your build folder. Congratulations you just built firmware you can copy to your Raspberry Pi Pico.
+
+# Debug using OpenOCD
+
+```bash
+mkdir temp
+cd temp
+sudo apt install automake autoconf build-essential texinfo libtool libftdi-dev libusb-1.0-0-dev
+git clone https://github.com/raspberrypi/openocd.git --recursive --branch rp2040 --depth=1
+./bootstrap
+./configure --enable-ftdi --enable-sysfsgpio --enable-bcm2835gpio
+make -j4
+```
+
+```bash
+sudo apt install gdb-multiarch
+```
