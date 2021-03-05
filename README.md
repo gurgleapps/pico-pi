@@ -96,7 +96,6 @@ Install
 ```
 sudo apt install python3-pip
 sudo pip3 install adafruit-ampy
-rshell -p /dev/ttyACM0
 ampy --port /dev/ttyACM0 put yourscript.py main.py
 ```
 
