@@ -42,6 +42,7 @@ Nice little project, you could even do it with no extra components if you take t
 
 [Here it is on Github](/MicroPython/speed-of-sound-hc-sr04) OR [you can see it in action here](https://www.youtube.com/watch?v=QJXZ_HiCYjQ)
 
+BUG BUG
 
 # Coding Environment
 
