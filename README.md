@@ -46,6 +46,7 @@ Nice little project, you could even do it with no extra components if you take t
 ## Pico Pong
 
 [![Pico Pong Video](https://img.youtube.com/vi/WvZvtElvWlM/0.jpg)](https://youtu.be/WvZvtElvWlM)
+
 [MicroPython Code](https://github.com/gurgleapps/Pico-Pong)
 
 
