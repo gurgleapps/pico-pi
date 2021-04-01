@@ -8,6 +8,7 @@
 - [Projects](#projects)
   - [Ghost Keyboard Hacking Prank](#ghost-keyboard-hacking-prank)
   - [Measure Speed Of Sound or Distance with HC-SR04](#measure-speed-of-sound-or-distance-with-hc-sr04)
+  - [Pico Pong](#pico-pong)
 - [Coding Environment](#coding-environment)
   - [MicroPython](#micropython)
     - [Get MicroPython on the Pico](#get-micropython-on-the-pico)
@@ -30,7 +31,7 @@
 # About
 A handy guide to getting started with the Raspberry Pi Pico
 
-[![Alt text](https://img.youtube.com/vi/xpPPmEJIvhw/0.jpg)](https://youtu.be/xpPPmEJIvhw)
+[![Raspbery Pi Pico Video Thumbnail](https://img.youtube.com/vi/xpPPmEJIvhw/0.jpg)](https://youtu.be/xpPPmEJIvhw)
 
 # Projects
 
@@ -41,6 +42,11 @@ Nice little project, you could even do it with no extra components if you take t
 ## Measure Speed Of Sound or Distance with HC-SR04
 
 [Here it is on Github](/MicroPython/speed-of-sound-hc-sr04) OR [you can see it in action here](https://www.youtube.com/watch?v=QJXZ_HiCYjQ)
+
+## Pico Pong
+
+[![Pico Pong Video](https://img.youtube.com/vi/WvZvtElvWlM/0.jpg)](https://youtu.be/WvZvtElvWlM)
+[MicroPython Code](https://github.com/gurgleapps/Pico-Pong)
 
 
 # Coding Environment
@@ -193,6 +199,15 @@ Next in your project folder clone the Pico SDK repo
 git clone https://github.com/raspberrypi/pico-sdk.git
 ```
 
+If you want to inclue TinyUSB and also avoid warning messages later.
+
+```bash
+cd pico-sdk
+git submodule update --init
+cd ..
+```
+
+
 Copy this file to your project folder
 ```bash
 cp pico-sdk/external/pico_sdk_import.cmake ./
@@ -220,7 +235,7 @@ target_link_libraries(flash_led pico_stdlib)
 pico_add_extra_outputs(flash_led)
 ```
 
-It will need to know where to find the SDK we cloned from github so
+It will need to know where to find the SDK we cloned from github so set this replacing the path to where you installed the sdk usding git clone.
 
 ```bash
 export PICO_SDK_PATH=/home/pi/Desktop/dev/pico-sdk
@@ -234,6 +249,7 @@ set(PICO_SDK_FETCH_FROM_GIT on)
 
 
 ```bash
+mkdir build
 cd build
 cmake ..
 make flash_led
